@@ -14,7 +14,7 @@ df = pd.read_csv(url)
 
 # Load shapefile and convert to WGS84
 shapefile_path = "Kommun_Sweref99TM.shp"
-gdf = gpd.read_file(shapefile_path).to_crs(epsg=4326)
+gdf = gpd.read_file(shapefile_path).to_crs("EPSG:4326")
 municipality_column = "KnNamn"
 
 # Get list of people from the dataframe (excluding the 'Kommun' column)
