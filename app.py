@@ -30,8 +30,12 @@ app.layout = html.Div([
         value="Emma"
     ),
     html.H3(id="total-visited"),
-    dcc.Graph(id="map-graph")
+    html.Div(
+        dcc.Graph(id="map-graph"),
+        style={"marginLeft": "40px"}  # Add left margin to the graph
+    )
 ])
+
 
 # Callback to update map and total count
 @app.callback(
